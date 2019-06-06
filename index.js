@@ -1,15 +1,3 @@
-//console.log('hello from node.js');
-
-//const person = require('./person');
-//const Person = require('./person');
-//console.log(person);
-//console.log(person.name);
-
-//const person1 = new Person('Johe Doe', 30);
-//person1.greeting();
-
-//using a express framework is much easier, but this gonna show the otherway without using express
-//putting everything together that we have learned
 
 const http = require('http');
 const path = require('path');
@@ -18,43 +6,13 @@ const fs = require('fs');
 //load file to browser
 const server = http.createServer((req,res) => {
     
-    /*
-    if (req.url=='/'){
-        //if the url is /, want to load a html file by load other page
-        //can use fs module
-        fs.readFile(path.join(__dirname,'public','index.html'),(err,content)=>{
-            //add content type so that it shows html
-            if (err) throw err;
-            res.writeHead(200,{'Content-Type': 'text/html'});
-            res.end(content);
-            //res.end('<h1> Home </h1>');
-        })
-    }
-
-    // if we want this to be REST API, we wouldn't serving html, we will serving json
-    if (req.url=='/api/users'){
-        //normaly, what we would do is fetch data from a database,
-        //however, this time just hard coding
-        const users = [
-            {name: 'Bob Smith',age: 40},
-            {name: 'John Doe',age: 30}
-
-        ];
-        res.writeHead(200,{'Content-Type': 'application/json'});
-        //turn this javaScript object into json
-        res.end(JSON.stringify(users));
-    }
-
-    */
 
     // Want to make the file path dynamic
     //Build file path
-    // the third parameter is dynamic url, if the request url is '/', then it shows index.html, else it show req.url
+    // the third parameter is dynamic url, if the request url is '/', then it shows begin.html, else it show req.url
     let filePath = path.join(__dirname,'public',req.url === '/' ?
-    'index.html' : req.url);
-    //console.log(filePath);
-    //res.end();
-
+    'mainPage.html' : req.url);
+    
     //get extension of the file
     let exname = path.extname(filePath);
 
@@ -98,11 +56,22 @@ const server = http.createServer((req,res) => {
                 res.end('Server Error '+err.code);
             }
         }
+        if (req.url=='mainPage.html?'){
+            //if the url is /mainPage.html, want to load a html file by load other page
+            //can use fs module
+            fs.readFile(path.join(__dirname,'public','mainPage.html?'),(err,content)=>{
+                //add content type so that it shows html
+                if (err) throw err;
+                res.writeHead(200,{'Content-Type': 'text/html'});
+                res.end(content);
+                //res.end('<h1> Home </h1>');
+            })
+        }
         //if there is no error
         else{//successful response
             res.writeHead(200,{'Content-Type': contentType});
             res.end(content,'utf8');
-
+            
         }
     });
 
