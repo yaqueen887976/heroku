@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="mainPage.css">
+    <script type="text/javascript" src="mainPage.js"></script>
+    <title>Ordering System</title>
+  </head>
+  <body>
+    <div id="allcontent">
+      <div id="titleInfo">
+	    	<h1>Food Ordering Systeming</h1>
+        <span>Search: </span><input type = "text" id="searchBox" size="50px">
+				<input type="button" value="Enter" class="enter" onclick="searchFood();">
+		    <input type="button" value="Your Order" class="cart" onclick="myOrderedList();">
+        <div id="countItems"></div>
+		  </div>
+    </div>
+    <div class="a" id = "show">
+	      <button class="tablinks" onclick="createSide();">Side</button>
+	      <button class="tablinks" onclick="createShrimp();">Shrimp</button>
+	      <button class="tablinks" onclick="createBeef();">Beef/Steak</button>
+	      <button class="tablinks" onclick="createChicken();">Chicken</button>
+	      <button class="tablinks" onclick="createAppetizers();">Appetizers</button>
+	      <button class="tablinks" onclick="createDrink();">Drink</button>
+    </div>
+    <div id="information">
+	    <div id="item"></div>
+	    <table id="myTable"></table>
+      <div id="content"></div>
+	  </div>
+  </body>
+</html>

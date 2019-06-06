@@ -1,0 +1,146 @@
+/* Style the tab */
+body{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: url("mainpage.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+h1{
+  text-align: center;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+span {
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+
+#show{
+  width: 200px;
+  margin-top: 40px;
+  margin-left: 20%;
+  float: left;
+}
+
+img{
+  width:200px;
+  height:200px;
+}
+
+#allcontent{
+  width: 800px;
+  padding-top:5px;
+  padding-bottom:5px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 30px;
+  align-items: center;
+  font-weight: bold;
+}
+
+.a button{
+    font-size: 10pt;
+    margin-bottom: 10px;
+    color: white;
+    width: 100%;
+    display: block;
+    height:60px;
+    background-image: -webkit-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+    border-radius: 5px;
+    text-shadow: 0px -1px 0px rgba(0,0,0,.5);
+    box-shadow: 0px 6px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+
+}
+
+.a button:hover{
+  background-color: #FF7F50;
+}
+
+.tabcontent{
+  float: left;
+  width: 500px;
+  margin-top: 40px;
+}
+
+.addright {
+  float: right;
+}
+
+.addleft {
+  float: left;
+}
+
+.item {
+  width: 220px;
+  float: left;
+  margin-top: 40px;
+  margin-left: 30px;
+  height: 300px;
+}
+
+input[type="button"]{
+  color: white;
+  background-image: -webkit-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+  border-radius: 5px;
+  text-shadow: 0px -1px 0px rgba(0,0,0,.5);
+  box-shadow: 0px 6px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+}
+
+.enter {
+  margin-left: 20px;
+}
+
+.cart {
+  float: right;
+}
+
+#information {
+  margin-top: 30px;
+  width: 550px;
+  float: left;
+  padding-left: 30px;
+  height: 600px;
+  overflow: scroll;
+}
+
+#countItems {
+  width: 100px;
+  float: right;
+}
+
+.add, .delete {
+  float: right;
+}
+
+td {
+  padding-left: 30px;
+  padding-top: 15px;
+}
+
+#content {
+  float: right;
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
+.checkout {
+  width: 300px;
+  margin-left:130px;
+  font-size: 30pt;
+}
+
+.card {
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+.good {
+  font-size: 30pt;
+  margin-top: -5px;
+}
+
+.receiptCheck {
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 60px;
+}
